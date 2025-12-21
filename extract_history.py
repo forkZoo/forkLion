@@ -2,8 +2,8 @@ import subprocess
 import os
 from datetime import datetime
 
-OUTPUT_DIR = "monkey_evolution"
-FILE_PATH = "monkey_data/monkey.svg"
+OUTPUT_DIR = "lion_evolution"
+FILE_PATH = "lion_data/lion.svg"
 
 def extract_history():
     # Get all commits that touched the file
@@ -28,13 +28,13 @@ def extract_history():
         date_str = dt.strftime("%Y-%m-%d_%H-%M")
         
         # Determine unique filename
-        filename = f"{date_str}_monkey.svg"
+        filename = f"{date_str}_lion.svg"
         output_path = os.path.join(OUTPUT_DIR, filename)
         
         # Handle duplicates (multiple commits same minute)
         counter = 1
         while os.path.exists(output_path):
-            filename = f"{date_str}_monkey_{counter}.svg"
+            filename = f"{date_str}_lion_{counter}.svg"
             output_path = os.path.join(OUTPUT_DIR, filename)
             counter += 1
 

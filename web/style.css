@@ -1,4 +1,4 @@
-/* ForkMonkey - Cyberpunk/Glassmorphism Design */
+/* ForkLion - Cyberpunk/Glassmorphism Design */
 
 :root {
     /* Color palette - Cyberpunk/Neon */
@@ -239,19 +239,19 @@ body {
     border: 1px solid rgba(0, 204, 255, 0.3);
 }
 
-/* Monkey display */
-.monkey-panel {
+/* Lion display */
+.lion-panel {
     grid-row: 1 / 2;
 }
 
-.monkey-display {
+.lion-display {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-lg);
     height: 100%;
 }
 
-.monkey-container {
+.lion-container {
     background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
     border-radius: 12px;
     padding: var(--spacing-md);
@@ -264,7 +264,7 @@ body {
     overflow: hidden;
 }
 
-.monkey-container::before {
+.lion-container::before {
     content: '';
     position: absolute;
     top: 0;
@@ -278,7 +278,7 @@ body {
     pointer-events: none;
 }
 
-.monkey-container svg {
+.lion-container svg {
     max-width: 90%;
     max-height: 90%;
     width: auto;
@@ -322,7 +322,7 @@ body {
     }
 }
 
-.monkey-info {
+.lion-info {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-sm);
@@ -611,7 +611,7 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .monkey-panel {
+    .lion-panel {
         grid-row: auto;
     }
 
@@ -644,7 +644,7 @@ body {
         justify-content: center;
     }
 
-    .monkey-info {
+    .lion-info {
         grid-template-columns: 1fr;
     }
 

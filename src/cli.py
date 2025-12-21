@@ -1,7 +1,7 @@
 """
-ForkMonkey CLI
+ForkLion CLI
 
-Command-line interface for managing your monkey.
+Command-line interface for managing your lion.
 """
 
 import os
@@ -16,9 +16,9 @@ from rich.console import Console
 from rich.table import Table
 from rich.panel import Panel
 
-from src.genetics import GeneticsEngine, MonkeyDNA
-from src.storage import MonkeyStorage
-from src.visualizer import MonkeyVisualizer
+from src.genetics import GeneticsEngine, LionDNA
+from src.storage import LionStorage
+from src.visualizer import LionVisualizer
 from src.evolution import EvolutionAgent
 
 console = Console()
@@ -26,7 +26,7 @@ console = Console()
 
 @click.group()
 def cli():
-    """🐵 ForkMonkey - Your AI-powered digital pet on GitHub"""
+    """🐵 ForkLion - Your AI-powered digital pet on GitHub"""
     pass
 
 
@@ -34,21 +34,21 @@ def cli():
 @click.option('--from-fork', is_flag=True, help='Initialize from parent repo (for forks)')
 @click.option('--force', '-f', is_flag=True, help='Force overwrite without confirmation (for CI)')
 def init(from_fork, force):
-    """Initialize a new monkey"""
-    console.print("\n🐵 [bold cyan]Initializing ForkMonkey...[/bold cyan]\n")
+    """Initialize a new lion"""
+    console.print("\n🐵 [bold cyan]Initializing ForkLion...[/bold cyan]\n")
     
-    storage = MonkeyStorage()
+    storage = LionStorage()
     
-    # Check if monkey already exists
+    # Check if lion already exists
     existing_dna = storage.load_dna()
     if existing_dna:
-        console.print("[yellow]⚠️  Monkey already exists![/yellow]")
+        console.print("[yellow]⚠️  Lion already exists![/yellow]")
         console.print(f"   DNA Hash: {existing_dna.dna_hash}")
         console.print(f"   Generation: {existing_dna.generation}")
         
         # In fork mode or with --force, auto-confirm to allow CI to proceed
         if not force and not from_fork:
-            if not click.confirm("\nOverwrite existing monkey?"):
+            if not click.confirm("\nOverwrite existing lion?"):
                 console.print("[red]Cancelled.[/red]")
                 return
         else:
@@ -61,33 +61,33 @@ def init(from_fork, force):
         
         if not dna:
             console.print("[yellow]⚠️  Not a fork or parent DNA not found[/yellow]")
-            console.print("[cyan]   Generating new monkey instead...[/cyan]")
+            console.print("[cyan]   Generating new lion instead...[/cyan]")
             dna = GeneticsEngine.generate_random_dna()
     else:
-        console.print("[cyan]🎲 Generating random monkey...[/cyan]")
+        console.print("[cyan]🎲 Generating random lion...[/cyan]")
         dna = GeneticsEngine.generate_random_dna()
     
     # Save DNA
     storage.save_dna_locally(dna)
     storage.save_stats(dna, age_days=0)
-    storage.save_history_entry(dna, "🎉 Your monkey was born!")
+    storage.save_history_entry(dna, "🎉 Your lion was born!")
     
     # Generate initial visualization
-    svg = MonkeyVisualizer.generate_svg(dna)
-    svg_file = Path("monkey_data/monkey.svg")
+    svg = LionVisualizer.generate_svg(dna)
+    svg_file = Path("lion_data/lion.svg")
     svg_file.write_text(svg)
     
     # Archive with timestamp
     from datetime import datetime
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M")
-    archive_file = Path(f"monkey_evolution/{timestamp}_monkey.svg")
+    archive_file = Path(f"lion_evolution/{timestamp}_lion.svg")
     archive_file.parent.mkdir(exist_ok=True)
     archive_file.write_text(svg)
     
     # Display info
-    console.print("\n[bold green]✅ Monkey initialized![/bold green]\n")
+    console.print("\n[bold green]✅ Lion initialized![/bold green]\n")
     
-    table = Table(title="Your Monkey")
+    table = Table(title="Your Lion")
     table.add_column("Property", style="cyan")
     table.add_column("Value", style="green")
     
@@ -108,15 +108,15 @@ def init(from_fork, force):
 @click.option('--ai', is_flag=True, help='Use AI-powered evolution')
 @click.option('--strength', default=0.1, help='Evolution strength (0-1)')
 def evolve(ai, strength):
-    """Evolve your monkey"""
-    console.print("\n🧬 [bold cyan]Evolving monkey...[/bold cyan]\n")
+    """Evolve your lion"""
+    console.print("\n🧬 [bold cyan]Evolving lion...[/bold cyan]\n")
     
-    storage = MonkeyStorage()
+    storage = LionStorage()
     
     # Load current DNA
     dna = storage.load_dna()
     if not dna:
-        console.print("[red]❌ No monkey found! Run 'init' first.[/red]")
+        console.print("[red]❌ No lion found! Run 'init' first.[/red]")
         return
     
     console.print(f"Current DNA: {dna.dna_hash}")
@@ -136,11 +136,11 @@ def evolve(ai, strength):
             console.print(f"[yellow]⚠️  AI evolution failed: {e}[/yellow]")
             console.print("[cyan]🎲 Falling back to random evolution...[/cyan]")
             evolved_dna = GeneticsEngine.evolve(dna, evolution_strength=strength)
-            story = "Your monkey evolved randomly!"
+            story = "Your lion evolved randomly!"
     else:
         console.print(f"\n[cyan]🎲 Using random evolution (strength: {strength})...[/cyan]")
         evolved_dna = GeneticsEngine.evolve(dna, evolution_strength=strength)
-        story = "Your monkey evolved randomly!"
+        story = "Your lion evolved randomly!"
     
     # Show changes
     console.print("\n[bold]Changes:[/bold]")
@@ -164,14 +164,14 @@ def evolve(ai, strength):
     storage.save_history_entry(evolved_dna, story)
     
     # Generate new visualization
-    svg = MonkeyVisualizer.generate_svg(evolved_dna)
-    svg_file = Path("monkey_data/monkey.svg")
+    svg = LionVisualizer.generate_svg(evolved_dna)
+    svg_file = Path("lion_data/lion.svg")
     svg_file.write_text(svg)
     
     # Archive with timestamp
     from datetime import datetime
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M")
-    archive_file = Path(f"monkey_evolution/{timestamp}_monkey.svg")
+    archive_file = Path(f"lion_evolution/{timestamp}_lion.svg")
     archive_file.parent.mkdir(exist_ok=True)
     archive_file.write_text(svg)
     
@@ -183,18 +183,18 @@ def evolve(ai, strength):
 
 @cli.command()
 def show():
-    """Show current monkey stats"""
-    console.print("\n🐵 [bold cyan]Your Monkey[/bold cyan]\n")
+    """Show current lion stats"""
+    console.print("\n🐵 [bold cyan]Your Lion[/bold cyan]\n")
     
-    storage = MonkeyStorage()
+    storage = LionStorage()
     dna = storage.load_dna()
     
     if not dna:
-        console.print("[red]❌ No monkey found! Run 'init' first.[/red]")
+        console.print("[red]❌ No lion found! Run 'init' first.[/red]")
         return
     
     # Stats table
-    table = Table(title="Monkey Stats")
+    table = Table(title="Lion Stats")
     table.add_column("Property", style="cyan")
     table.add_column("Value", style="green")
     
@@ -225,7 +225,7 @@ def history(limit):
     """Show evolution history"""
     console.print("\n📜 [bold cyan]Evolution History[/bold cyan]\n")
     
-    storage = MonkeyStorage()
+    storage = LionStorage()
     entries = storage.get_history()
     
     if not entries:
@@ -251,25 +251,25 @@ def history(limit):
 
 @cli.command()
 def visualize():
-    """Generate and save monkey visualization"""
+    """Generate and save lion visualization"""
     console.print("\n🎨 [bold cyan]Generating visualization...[/bold cyan]\n")
     
-    storage = MonkeyStorage()
+    storage = LionStorage()
     dna = storage.load_dna()
     
     if not dna:
-        console.print("[red]❌ No monkey found! Run 'init' first.[/red]")
+        console.print("[red]❌ No lion found! Run 'init' first.[/red]")
         return
     
     # Generate SVG
-    svg = MonkeyVisualizer.generate_svg(dna)
-    svg_file = Path("monkey_data/monkey.svg")
+    svg = LionVisualizer.generate_svg(dna)
+    svg_file = Path("lion_data/lion.svg")
     svg_file.write_text(svg)
     
     # Archive with timestamp
     from datetime import datetime
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M")
-    archive_file = Path(f"monkey_evolution/{timestamp}_monkey.svg")
+    archive_file = Path(f"lion_evolution/{timestamp}_lion.svg")
     archive_file.parent.mkdir(exist_ok=True)
     archive_file.write_text(svg)
     
@@ -287,14 +287,14 @@ def visualize():
 
 @cli.command()
 def update_readme():
-    """Update README with current monkey"""
+    """Update README with current lion"""
     console.print("\n📝 [bold cyan]Updating README...[/bold cyan]\n")
     
-    storage = MonkeyStorage()
+    storage = LionStorage()
     dna = storage.load_dna()
     
     if not dna:
-        console.print("[red]❌ No monkey found! Run 'init' first.[/red]")
+        console.print("[red]❌ No lion found! Run 'init' first.[/red]")
         return
     
     # Read current README
@@ -306,43 +306,43 @@ def update_readme():
     readme = readme_file.read_text()
     
     # Generate SVG and save it
-    svg = MonkeyVisualizer.generate_svg(dna, width=400, height=400)
-    svg_file = Path("monkey_data/monkey.svg")
+    svg = LionVisualizer.generate_svg(dna, width=400, height=400)
+    svg_file = Path("lion_data/lion.svg")
     svg_file.write_text(svg)
     
     # Archive with timestamp
     from datetime import datetime
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M")
-    archive_file = Path(f"monkey_evolution/{timestamp}_monkey.svg")
+    archive_file = Path(f"lion_evolution/{timestamp}_lion.svg")
     archive_file.parent.mkdir(exist_ok=True)
     archive_file.write_text(svg)
     
-    # Update monkey display section with image reference
-    monkey_section = '''<!-- MONKEY_DISPLAY_START -->
+    # Update lion display section with image reference
+    lion_section = '''<!-- LION_DISPLAY_START -->
 <div align="center">
 
-![Your Monkey](monkey_data/monkey.svg)
+![Your Lion](lion_data/lion.svg)
 
 </div>
-<!-- MONKEY_DISPLAY_END -->'''
+<!-- LION_DISPLAY_END -->'''
     
     # Replace section
     import re
-    pattern = r'<!-- MONKEY_DISPLAY_START -->.*?<!-- MONKEY_DISPLAY_END -->'
-    readme = re.sub(pattern, monkey_section, readme, flags=re.DOTALL)
+    pattern = r'<!-- LION_DISPLAY_START -->.*?<!-- LION_DISPLAY_END -->'
+    readme = re.sub(pattern, lion_section, readme, flags=re.DOTALL)
     
     # Update stats section
     history = storage.get_history()
     age_days = len(history)
     
-    stats_section = f'''<!-- MONKEY_STATS_START -->
+    stats_section = f'''<!-- LION_STATS_START -->
 - **Generation**: {dna.generation}
 - **Age**: {age_days} days
 - **Mutations**: {dna.mutation_count}
 - **Rarity Score**: {dna.get_rarity_score():.1f}/100
-<!-- MONKEY_STATS_END -->'''
+<!-- LION_STATS_END -->'''
     
-    pattern = r'<!-- MONKEY_STATS_START -->.*?<!-- MONKEY_STATS_END -->'
+    pattern = r'<!-- LION_STATS_START -->.*?<!-- LION_STATS_END -->'
     readme = re.sub(pattern, stats_section, readme, flags=re.DOTALL)
     
     # Save
