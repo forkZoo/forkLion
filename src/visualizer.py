@@ -1,5 +1,5 @@
 """
-ForkMonkey Visualizer - Dog Edition
+ForkMonkey Visualizer - Lion Edition
 """
 
 import math
@@ -7,23 +7,22 @@ from typing import Dict, List
 from src.genetics import MonkeyDNA, TraitCategory, Rarity
 
 class MonkeyVisualizer:
-    """Generates generic SVG dog art from DNA"""
+    """Generates generic SVG lion art from DNA"""
 
     BODY_COLORS = {
-        "brown": {"main": "#8B4513", "shadow": "#5D2E0C", "highlight": "#A0522D"},
-        "tan": {"main": "#D2B48C", "shadow": "#B8956E", "highlight": "#E8D4B8"},
+        "brown": {"main": "#CD853F", "shadow": "#8B4513", "highlight": "#DEB887"},
+        "tan": {"main": "#D2B48C", "shadow": "#B8956E", "highlight": "#F4A460"},
         "beige": {"main": "#F5F5DC", "shadow": "#D4D4B8", "highlight": "#FFFFF0"},
-        "gray": {"main": "#808080", "shadow": "#5A5A5A", "highlight": "#A0A0A0"},
-        "golden": {"main": "#FFD700", "shadow": "#B8860B", "highlight": "#FFEC8B"},
+        "golden": {"main": "#DAA520", "shadow": "#B8860B", "highlight": "#FFD700"},
         "white": {"main": "#FFFFFF", "shadow": "#E0E0E0", "highlight": "#FFFFFF"},
-        "black": {"main": "#333333", "shadow": "#000000", "highlight": "#555555"},
-        "spotted": {"main": "#FFFFFF", "shadow": "#E0E0E0", "highlight": "#FFFFFF"},
+        "black": {"main": "#2F2F2F", "shadow": "#000000", "highlight": "#4F4F4F"},
     }
 
     BACKGROUNDS = {
-        "white": {"type": "solid", "color": "#F8F9FA"},
+        "white": {"type": "solid", "color": "#FFF5E6"},
         "blue_sky": {"type": "gradient", "id": "sky-gradient"},
-        "green_grass": {"type": "gradient", "id": "grass-gradient"},
+        "sunset": {"type": "gradient", "id": "sunset-gradient"},
+        "savanna": {"type": "scene", "base": "#F4A460", "elements": "trees"},
     }
 
     @classmethod
@@ -57,11 +56,16 @@ class MonkeyVisualizer:
     <linearGradient id="sky-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
         <stop offset="0%" stop-color="#87CEEB"/><stop offset="100%" stop-color="#E0F4FF"/>
     </linearGradient>
+    <linearGradient id="sunset-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#FF4500"/><stop offset="100%" stop-color="#FFD700"/>
+    </linearGradient>
 </defs>'''
 
     @classmethod
     def _generate_background(cls, bg: str, w: int, h: int, seed: int) -> str:
-        return f'<rect width="{w}" height="{h}" fill="#F0F8FF"/>'
+        if bg == "savanna":
+            return f'<rect width="{w}" height="{h}" fill="#F4A460"/><circle cx="50" cy="50" r="30" fill="#FFD700" opacity="0.8"/>'
+        return f'<rect width="{w}" height="{h}" fill="#FFF5E6"/>'
 
     @classmethod
     def _generate_body(cls, color: str, pattern: str, w: int, h: int, seed: int) -> str:
@@ -69,15 +73,22 @@ class MonkeyVisualizer:
         c = cls.BODY_COLORS.get(color, cls.BODY_COLORS["brown"])
         parts = []
 
-        # Floppy Ears
-        parts.append(f'<ellipse cx="{cx-70}" cy="{cy-40}" rx="30" ry="60" fill="{c["main"]}" transform="rotate(20 {cx-70} {cy-40})" filter="url(#shadow)"/>')
-        parts.append(f'<ellipse cx="{cx+70}" cy="{cy-40}" rx="30" ry="60" fill="{c["main"]}" transform="rotate(-20 {cx+70} {cy-40})" filter="url(#shadow)"/>')
+        # Mane (Big and fluffy)
+        for i in range(12):
+            angle = i * 30
+            parts.append(f'<ellipse cx="{cx}" cy="{cy}" rx="140" ry="140" fill="#8B4513" transform="rotate({angle} {cx} {cy})" opacity="0.8"/>')
+        
+        parts.append(f'<circle cx="{cx}" cy="{cy}" r="120" fill="#A0522D" filter="url(#shadow)"/>')
+
+        # Ears
+        parts.append(f'<circle cx="{cx-70}" cy="{cy-70}" r="25" fill="{c["main"]}"/>')
+        parts.append(f'<circle cx="{cx+70}" cy="{cy-70}" r="25" fill="{c["main"]}"/>')
         
         # Head
-        parts.append(f'<rect x="{cx-80}" y="{cy-80}" width="160" height="150" rx="40" fill="{c["main"]}" filter="url(#shadow)"/>')
+        parts.append(f'<circle cx="{cx}" cy="{cy}" r="90" fill="{c["main"]}" filter="url(#shadow)"/>')
         
-        # Snout area
-        parts.append(f'<ellipse cx="{cx}" cy="{cy+20}" rx="50" ry="35" fill="{c["highlight"]}" opacity="0.6"/>')
+        # Muzzle
+        parts.append(f'<ellipse cx="{cx}" cy="{cy+30}" rx="45" ry="35" fill="{c["highlight"]}" opacity="0.6"/>')
 
         return "\n".join(parts)
 
@@ -86,21 +97,20 @@ class MonkeyVisualizer:
         cx, cy = w // 2, h // 2
         parts = []
         
-        # Eyes (Round for dog)
-        parts.append(f'<circle cx="{cx-35}" cy="{cy-20}" r="15" fill="#FFF"/>')
-        parts.append(f'<circle cx="{cx+35}" cy="{cy-20}" r="15" fill="#FFF"/>')
-        parts.append(f'<circle cx="{cx-35}" cy="{cy-20}" r="8" fill="#000"/>')
-        parts.append(f'<circle cx="{cx+35}" cy="{cy-20}" r="8" fill="#000"/>')
+        # Eyes (Intense)
+        parts.append(f'<path d="M{cx-40} {cy-10} Q{cx-20} {cy-25} {cx} {cy-10}" stroke="#000" stroke-width="2" fill="none" opacity="0.5"/>')
+        parts.append(f'<ellipse cx="{cx-30}" cy="{cy-10}" rx="12" ry="10" fill="#FFD700"/>')
+        parts.append(f'<ellipse cx="{cx+30}" cy="{cy-10}" rx="12" ry="10" fill="#FFD700"/>')
+        parts.append(f'<circle cx="{cx-30}" cy="{cy-10}" r="4" fill="#000"/>')
+        parts.append(f'<circle cx="{cx+30}" cy="{cy-10}" r="4" fill="#000"/>')
         
-        # Big nose
-        parts.append(f'<ellipse cx="{cx}" cy="{cy+10}" rx="20" ry="15" fill="#000"/>')
-        parts.append(f'<ellipse cx="{cx-5}" cy="{cy+5}" rx="5" ry="3" fill="#FFF" opacity="0.5"/>')
+        # Nose (Broad)
+        parts.append(f'<path d="M{cx-20} {cy+20} L{cx+20} {cy+20} L{cx} {cy+45} Z" fill="#3E2723"/>')
         
-        # Tongue out?
-        if expr in ["happy", "excited"]:
-             parts.append(f'<path d="M{cx-10} {cy+30} Q{cx} {cy+60} {cx+10} {cy+30}" fill="#FF69B4" stroke="#D14785" stroke-width="2"/>')
-        else:
-            parts.append(f'<path d="M{cx-15} {cy+30} Q{cx} {cy+45} {cx+15} {cy+30}" stroke="#000" stroke-width="3" fill="none"/>')
+        # Mouth
+        parts.append(f'<path d="M{cx} {cy+45} L{cx} {cy+55}" stroke="#3E2723" stroke-width="2"/>')
+        parts.append(f'<path d="M{cx-20} {cy+60} Q{cx-10} {cy+70} {cx} {cy+55}" stroke="#3E2723" stroke-width="2" fill="none"/>')
+        parts.append(f'<path d="M{cx+20} {cy+60} Q{cx+10} {cy+70} {cx} {cy+55}" stroke="#3E2723" stroke-width="2" fill="none"/>')
             
         return "\n".join(parts)
 
