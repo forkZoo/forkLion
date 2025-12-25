@@ -575,6 +575,22 @@
         "special": "sparkles"
       },
       "story": "Your lion evolved! Changes: special: glow \u2192 sparkles"
+    },
+    {
+      "timestamp": "2025-12-25T02:03:09.963376",
+      "dna_hash": "9d24de63b5c37676",
+      "generation": 1,
+      "mutation_count": 5,
+      "rarity_score": 30.0,
+      "traits": {
+        "body_color": "brown",
+        "face_expression": "excited",
+        "accessory": "headphones",
+        "pattern": "cosmic_dust",
+        "background": "sunset",
+        "special": "sparkles"
+      },
+      "story": "Your lion evolved! Changes: face_expression: wise \u2192 excited"
     }
   ]
 }
