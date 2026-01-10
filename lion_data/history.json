@@ -831,6 +831,22 @@
         "special": "sparkles"
       },
       "story": "Your lion rested today. No visible changes."
+    },
+    {
+      "timestamp": "2026-01-10T02:02:33.264124",
+      "dna_hash": "3723e03d2ffedc82",
+      "generation": 1,
+      "mutation_count": 10,
+      "rarity_score": 28.333333333333332,
+      "traits": {
+        "body_color": "brown",
+        "face_expression": "neutral",
+        "accessory": "crown",
+        "pattern": "cosmic_dust",
+        "background": "sunset",
+        "special": "sparkles"
+      },
+      "story": "Your lion rested today. No visible changes."
     }
   ]
 }
