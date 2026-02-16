@@ -1455,6 +1455,22 @@
         "special": "sparkles"
       },
       "story": "Your lion evolved! Changes: special: glow \u2192 sparkles"
+    },
+    {
+      "timestamp": "2026-02-16T13:23:03.429050",
+      "dna_hash": "0ea1a6e6ad5aedbb",
+      "generation": 1,
+      "mutation_count": 0,
+      "rarity_score": 26.666666666666668,
+      "traits": {
+        "body_color": "tan",
+        "face_expression": "enlightened",
+        "accessory": "bow",
+        "pattern": "stripes",
+        "background": "blue_sky",
+        "special": "glow"
+      },
+      "story": "\ud83c\udf89 Your lion was born!"
     }
   ]
 }
