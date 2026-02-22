@@ -1567,6 +1567,22 @@
         "special": "glow"
       },
       "story": "Your lion rested today. No visible changes."
+    },
+    {
+      "timestamp": "2026-02-22T12:39:44.356562",
+      "dna_hash": "deece056ef233aee",
+      "generation": 1,
+      "mutation_count": 0,
+      "rarity_score": 21.666666666666668,
+      "traits": {
+        "body_color": "bronze",
+        "face_expression": "zen",
+        "accessory": "bandana",
+        "pattern": "swirls",
+        "background": "beach",
+        "special": "none"
+      },
+      "story": "\ud83c\udf89 Your lion was born!"
     }
   ]
 }
