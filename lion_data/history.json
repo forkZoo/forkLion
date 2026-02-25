@@ -1615,6 +1615,22 @@
         "special": "none"
       },
       "story": "Your lion evolved! Changes: face_expression: zen \u2192 laughing"
+    },
+    {
+      "timestamp": "2026-02-25T02:38:39.349904",
+      "dna_hash": "21156e60c19bb590",
+      "generation": 1,
+      "mutation_count": 1,
+      "rarity_score": 21.666666666666668,
+      "traits": {
+        "body_color": "bronze",
+        "face_expression": "laughing",
+        "accessory": "bandana",
+        "pattern": "swirls",
+        "background": "beach",
+        "special": "none"
+      },
+      "story": "Your lion rested today. No visible changes."
     }
   ]
 }
