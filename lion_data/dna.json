@@ -1,14 +1,14 @@
 {
   "generation": 1,
   "parent_id": null,
-  "dna_hash": "cd72918c2401d4d4",
-  "mutation_count": 4,
+  "dna_hash": "6e03639e569bd18f",
+  "mutation_count": 5,
   "birth_timestamp": 54141,
   "traits": {
     "body_color": {
-      "value": "bronze",
+      "value": "copper",
       "rarity": "uncommon",
-      "gene_sequence": "af0c9603"
+      "gene_sequence": "0d83b1e8"
     },
     "face_expression": {
       "value": "winking",
