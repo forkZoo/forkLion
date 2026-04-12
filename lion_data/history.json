@@ -2351,6 +2351,22 @@
         "special": "none"
       },
       "story": "Your lion evolved! Changes: pattern: flames \u2192 aurora"
+    },
+    {
+      "timestamp": "2026-04-12T03:21:39.523607",
+      "dna_hash": "1d0bb2952a17c9a0",
+      "generation": 1,
+      "mutation_count": 21,
+      "rarity_score": 35.0,
+      "traits": {
+        "body_color": "silver",
+        "face_expression": "winking",
+        "accessory": "bandana",
+        "pattern": "aurora",
+        "background": "white",
+        "special": "shadow"
+      },
+      "story": "Your lion evolved! Changes: special: none \u2192 shadow"
     }
   ]
 }
