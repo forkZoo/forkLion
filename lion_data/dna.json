@@ -1,8 +1,8 @@
 {
   "generation": 1,
   "parent_id": null,
-  "dna_hash": "1a5bb6fee5f2a579",
-  "mutation_count": 7,
+  "dna_hash": "a42880e3787c4258",
+  "mutation_count": 8,
   "birth_timestamp": 708477,
   "traits": {
     "body_color": {
@@ -16,9 +16,9 @@
       "gene_sequence": "374db983"
     },
     "accessory": {
-      "value": "monocle",
-      "rarity": "uncommon",
-      "gene_sequence": "4b7e2599"
+      "value": "halo",
+      "rarity": "rare",
+      "gene_sequence": "8e822e38"
     },
     "pattern": {
       "value": "gradient",
@@ -36,5 +36,5 @@
       "gene_sequence": "9f7c3055"
     }
   },
-  "rarity_score": 11.666666666666666
+  "rarity_score": 16.666666666666664
 }
