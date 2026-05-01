@@ -2671,6 +2671,22 @@
         "special": "none"
       },
       "story": "Your lion evolved! Changes: accessory: monocle \u2192 halo"
+    },
+    {
+      "timestamp": "2026-05-01T03:52:31.798598",
+      "dna_hash": "baffd4011bcc000c",
+      "generation": 1,
+      "mutation_count": 10,
+      "rarity_score": 18.333333333333332,
+      "traits": {
+        "body_color": "brown",
+        "face_expression": "excited",
+        "accessory": "halo",
+        "pattern": "gradient",
+        "background": "sunset",
+        "special": "none"
+      },
+      "story": "Your lion evolved! Changes: face_expression: neutral \u2192 excited"
     }
   ]
 }
