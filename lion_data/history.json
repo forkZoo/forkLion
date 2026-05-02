@@ -2687,6 +2687,22 @@
         "special": "none"
       },
       "story": "Your lion evolved! Changes: face_expression: neutral \u2192 excited"
+    },
+    {
+      "timestamp": "2026-05-02T03:25:39.851454",
+      "dna_hash": "e6dae46beb3e8b86",
+      "generation": 1,
+      "mutation_count": 11,
+      "rarity_score": 20.0,
+      "traits": {
+        "body_color": "silver",
+        "face_expression": "excited",
+        "accessory": "halo",
+        "pattern": "gradient",
+        "background": "sunset",
+        "special": "none"
+      },
+      "story": "Your lion evolved! Changes: body_color: brown \u2192 silver"
     }
   ]
 }
