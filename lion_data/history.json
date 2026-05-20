@@ -2975,6 +2975,22 @@
         "special": "none"
       },
       "story": "Your lion evolved! Changes: body_color: golden \u2192 copper"
+    },
+    {
+      "timestamp": "2026-05-20T04:02:30.547836",
+      "dna_hash": "1015d591e67fac51",
+      "generation": 1,
+      "mutation_count": 22,
+      "rarity_score": 20.0,
+      "traits": {
+        "body_color": "copper",
+        "face_expression": "excited",
+        "accessory": "laser_eyes",
+        "pattern": "solid",
+        "background": "green_grass",
+        "special": "none"
+      },
+      "story": "Your lion rested today. No visible changes."
     }
   ]
 }
