@@ -1,8 +1,8 @@
 {
-  "dna_hash": "1015d591e67fac51",
+  "dna_hash": "6cb3d17a8a852700",
   "generation": 1,
   "age_days": 0,
-  "mutation_count": 23,
+  "mutation_count": 24,
   "rarity_score": 20.0,
   "parent_id": null,
   "traits": {
@@ -23,7 +23,7 @@
       "rarity": "common"
     },
     "background": {
-      "value": "green_grass",
+      "value": "sunset",
       "rarity": "common"
     },
     "special": {
@@ -31,5 +31,5 @@
       "rarity": "common"
     }
   },
-  "last_updated": "2026-05-29T04:07:12.383844"
+  "last_updated": "2026-05-30T03:53:45.322553"
 }
