@@ -3183,6 +3183,22 @@
         "special": "none"
       },
       "story": "Your lion rested today. No visible changes."
+    },
+    {
+      "timestamp": "2026-06-02T04:26:29.358308",
+      "dna_hash": "e0d76a3f0b40331c",
+      "generation": 1,
+      "mutation_count": 27,
+      "rarity_score": 20.0,
+      "traits": {
+        "body_color": "copper",
+        "face_expression": "wise",
+        "accessory": "laser_eyes",
+        "pattern": "gradient",
+        "background": "sunset",
+        "special": "none"
+      },
+      "story": "Your lion evolved! Changes: face_expression: excited \u2192 wise"
     }
   ]
 }
