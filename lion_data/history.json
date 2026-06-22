@@ -3519,6 +3519,22 @@
         "special": "none"
       },
       "story": "Your lion evolved! Changes: body_color: copper \u2192 pink"
+    },
+    {
+      "timestamp": "2026-06-22T09:06:35.699205",
+      "dna_hash": "fb79eb010255da56",
+      "generation": 1,
+      "mutation_count": 0,
+      "rarity_score": 11.666666666666666,
+      "traits": {
+        "body_color": "beige",
+        "face_expression": "happy",
+        "accessory": "monocle",
+        "pattern": "gradient",
+        "background": "white",
+        "special": "none"
+      },
+      "story": "\ud83c\udf89 Your lion was born!"
     }
   ]
 }
