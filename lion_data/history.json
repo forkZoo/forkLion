@@ -3503,6 +3503,22 @@
         "special": "none"
       },
       "story": "Your lion rested today. No visible changes."
+    },
+    {
+      "timestamp": "2026-06-22T04:59:00.912502",
+      "dna_hash": "afe1700a1c49e2e9",
+      "generation": 1,
+      "mutation_count": 37,
+      "rarity_score": 30.0,
+      "traits": {
+        "body_color": "pink",
+        "face_expression": "laughing",
+        "accessory": "halo",
+        "pattern": "gradient",
+        "background": "white",
+        "special": "none"
+      },
+      "story": "Your lion evolved! Changes: body_color: copper \u2192 pink"
     }
   ]
 }
