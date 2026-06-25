@@ -3567,6 +3567,22 @@
         "special": "none"
       },
       "story": "Your lion evolved! Changes: face_expression: happy \u2192 cool"
+    },
+    {
+      "timestamp": "2026-06-25T04:01:41.981381",
+      "dna_hash": "54773bf4a35884ce",
+      "generation": 1,
+      "mutation_count": 5,
+      "rarity_score": 13.333333333333334,
+      "traits": {
+        "body_color": "beige",
+        "face_expression": "cool",
+        "accessory": "monocle",
+        "pattern": "spots",
+        "background": "blue_sky",
+        "special": "none"
+      },
+      "story": "Your lion evolved! Changes: pattern: gradient \u2192 spots"
     }
   ]
 }
