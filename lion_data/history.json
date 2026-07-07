@@ -3759,6 +3759,22 @@
         "special": "none"
       },
       "story": "Your lion evolved! Changes: background: blue_sky \u2192 mountains"
+    },
+    {
+      "timestamp": "2026-07-07T03:52:28.114154",
+      "dna_hash": "b47a72875f69c793",
+      "generation": 1,
+      "mutation_count": 8,
+      "rarity_score": 13.333333333333334,
+      "traits": {
+        "body_color": "beige",
+        "face_expression": "cool",
+        "accessory": "bandana",
+        "pattern": "spots",
+        "background": "mountains",
+        "special": "none"
+      },
+      "story": "Your lion rested today. No visible changes."
     }
   ]
 }
