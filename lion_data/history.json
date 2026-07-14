@@ -3871,6 +3871,22 @@
         "special": "none"
       },
       "story": "Your lion evolved! Changes: face_expression: cool \u2192 surprised"
+    },
+    {
+      "timestamp": "2026-07-14T02:50:44.561500",
+      "dna_hash": "19426da1126ae924",
+      "generation": 1,
+      "mutation_count": 10,
+      "rarity_score": 18.333333333333332,
+      "traits": {
+        "body_color": "beige",
+        "face_expression": "surprised",
+        "accessory": "bow",
+        "pattern": "spots",
+        "background": "mountains",
+        "special": "none"
+      },
+      "story": "Your lion evolved! Changes: accessory: bandana \u2192 bow"
     }
   ]
 }
