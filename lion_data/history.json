@@ -3887,6 +3887,22 @@
         "special": "none"
       },
       "story": "Your lion evolved! Changes: accessory: bandana \u2192 bow"
+    },
+    {
+      "timestamp": "2026-07-15T02:49:27.653482",
+      "dna_hash": "19426da1126ae924",
+      "generation": 1,
+      "mutation_count": 10,
+      "rarity_score": 18.333333333333332,
+      "traits": {
+        "body_color": "beige",
+        "face_expression": "surprised",
+        "accessory": "bow",
+        "pattern": "spots",
+        "background": "mountains",
+        "special": "none"
+      },
+      "story": "Your lion rested today. No visible changes."
     }
   ]
 }
