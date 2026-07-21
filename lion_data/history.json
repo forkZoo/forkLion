@@ -3983,6 +3983,22 @@
         "special": "none"
       },
       "story": "Your lion evolved! Changes: accessory: bow \u2192 bandana"
+    },
+    {
+      "timestamp": "2026-07-21T03:16:27.522182",
+      "dna_hash": "f93da91eef837877",
+      "generation": 1,
+      "mutation_count": 18,
+      "rarity_score": 26.666666666666668,
+      "traits": {
+        "body_color": "brown",
+        "face_expression": "cosmic",
+        "accessory": "bandana",
+        "pattern": "stripes",
+        "background": "mountains",
+        "special": "none"
+      },
+      "story": "Your lion evolved! Changes: face_expression: surprised \u2192 cosmic, pattern: spots \u2192 stripes"
     }
   ]
 }
