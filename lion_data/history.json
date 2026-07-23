@@ -4015,6 +4015,22 @@
         "special": "sparkles"
       },
       "story": "Your lion evolved! Changes: special: none \u2192 sparkles"
+    },
+    {
+      "timestamp": "2026-07-23T03:20:55.400561",
+      "dna_hash": "379fc4c7f2fca5f1",
+      "generation": 1,
+      "mutation_count": 22,
+      "rarity_score": 28.333333333333332,
+      "traits": {
+        "body_color": "brown",
+        "face_expression": "cosmic",
+        "accessory": "bandana",
+        "pattern": "stripes",
+        "background": "beach",
+        "special": "shadow"
+      },
+      "story": "Your lion evolved! Changes: background: mountains \u2192 beach, special: sparkles \u2192 shadow"
     }
   ]
 }
