@@ -1,40 +1,40 @@
 {
   "generation": 1,
   "parent_id": null,
-  "dna_hash": "5d70c91a1d30253c",
-  "mutation_count": 44,
-  "birth_timestamp": 274950,
+  "dna_hash": "e0e7c0e4c8f4ea20",
+  "mutation_count": 0,
+  "birth_timestamp": 783954,
   "traits": {
     "body_color": {
-      "value": "copper",
-      "rarity": "uncommon",
-      "gene_sequence": "0d83b1e8"
+      "value": "brown",
+      "rarity": "common",
+      "gene_sequence": "d47133ea"
     },
     "face_expression": {
-      "value": "enlightened",
-      "rarity": "legendary",
-      "gene_sequence": "3fc73d5b"
+      "value": "curious",
+      "rarity": "common",
+      "gene_sequence": "7d0bf056"
     },
     "accessory": {
-      "value": "none",
+      "value": "bow",
       "rarity": "common",
-      "gene_sequence": "8f67e8db"
+      "gene_sequence": "22acdd9b"
     },
     "pattern": {
-      "value": "spots",
+      "value": "gradient",
       "rarity": "common",
-      "gene_sequence": "e7bbc10d"
+      "gene_sequence": "8f053269"
     },
     "background": {
-      "value": "mountains",
-      "rarity": "uncommon",
-      "gene_sequence": "ec41435d"
+      "value": "green_grass",
+      "rarity": "common",
+      "gene_sequence": "976ee2e9"
     },
     "special": {
-      "value": "sparkles",
-      "rarity": "uncommon",
-      "gene_sequence": "18ebc4a5"
+      "value": "none",
+      "rarity": "common",
+      "gene_sequence": "9f7c3055"
     }
   },
-  "rarity_score": 30.0
+  "rarity_score": 10.0
 }
