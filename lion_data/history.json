@@ -4735,6 +4735,22 @@
         "special": "none"
       },
       "story": "Your lion evolved! Changes: face_expression: sleepy \u2192 happy, accessory: simple_hat \u2192 none"
+    },
+    {
+      "timestamp": "2026-09-05T03:49:02.817794",
+      "dna_hash": "e465f82d9cea8315",
+      "generation": 1,
+      "mutation_count": 8,
+      "rarity_score": 11.666666666666666,
+      "traits": {
+        "body_color": "golden",
+        "face_expression": "happy",
+        "accessory": "none",
+        "pattern": "gradient",
+        "background": "white",
+        "special": "none"
+      },
+      "story": "Your lion rested today. No visible changes."
     }
   ]
 }
