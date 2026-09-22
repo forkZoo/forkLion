@@ -5007,6 +5007,22 @@
         "special": "none"
       },
       "story": "Your lion evolved! Changes: background: white \u2192 green_grass"
+    },
+    {
+      "timestamp": "2026-09-22T04:11:39.786820",
+      "dna_hash": "4657f5dfb8b8ee75",
+      "generation": 1,
+      "mutation_count": 15,
+      "rarity_score": 13.333333333333334,
+      "traits": {
+        "body_color": "bronze",
+        "face_expression": "happy",
+        "accessory": "none",
+        "pattern": "hearts",
+        "background": "green_grass",
+        "special": "none"
+      },
+      "story": "Your lion evolved! Changes: pattern: gradient \u2192 hearts"
     }
   ]
 }
