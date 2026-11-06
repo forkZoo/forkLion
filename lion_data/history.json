@@ -5727,6 +5727,22 @@
         "special": "none"
       },
       "story": "Your lion evolved! Changes: accessory: bandana \u2192 none"
+    },
+    {
+      "timestamp": "2026-11-06T05:53:20.194214",
+      "dna_hash": "745ba2460caf382b",
+      "generation": 1,
+      "mutation_count": 45,
+      "rarity_score": 20.0,
+      "traits": {
+        "body_color": "bronze",
+        "face_expression": "cool",
+        "accessory": "none",
+        "pattern": "gradient",
+        "background": "space",
+        "special": "none"
+      },
+      "story": "Your lion rested today. No visible changes."
     }
   ]
 }
